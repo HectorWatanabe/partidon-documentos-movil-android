@@ -1,0 +1,302 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Partidón",
+		"_postman_id": "7f118f8d-7e3a-47ff-2cf4-f01d78702be2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear Usuario",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/partidon/rest/usuario/agregar",
+					"request": {
+						"url": "http://localhost:8084/partidon/rest/usuario/agregar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "correo",
+									"value": "empresaExample@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "ubicacion",
+									"value": "Lima",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "nombre",
+									"value": "Example",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "Registrar un Usuario"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Deporte",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/partidon/rest/deporte/agregar",
+					"request": {
+						"url": "http://localhost:8084/partidon/rest/deporte/agregar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "T_Nombre",
+									"value": "Tenis",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/partidon/rest/empresa/agregar",
+					"request": {
+						"url": "http://localhost:8084/partidon/rest/empresa/agregar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdUsuario",
+									"value": "30",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "N_Telefono",
+									"value": "987336123",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "T_Descripcion",
+									"value": "Empresa de serva de canchas",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipo",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/partidon/rest/equipo/agregar",
+					"request": {
+						"url": "http://localhost:8084/partidon/rest/equipo/agregar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdDueno_Jugador",
+									"value": "6",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "N_Total_Jugadores",
+									"value": "15",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "IdDeporte",
+									"value": "2",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "T_Nombre",
+									"value": "Los Campeones",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jugador",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/partidon/rest/jugador/agregar",
+					"request": {
+						"url": "http://localhost:8084/partidon/rest/jugador/agregar",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "IdUsuario",
+									"value": "30",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "N_Puntaje",
+									"value": "0",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login Usuario",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/partidon/rest/autentificacion/login",
+					"request": {
+						"url": "http://localhost:8084/partidon/rest/autentificacion/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "correo",
+									"value": "hectorwatanabe.hw@gmail.com",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": "Autentificación de Partidon"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Muro",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:8084/partidon/rest/muro/agregar",
+					"request": {
+						"url": "http://localhost:8084/partidon/rest/muro/agregar",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "T_Imagen",
+									"value": "",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "N_Tipo_Muro",
+									"value": "0",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
